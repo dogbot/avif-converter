@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple macOS Finder Quick Actions for converting images to and from AVIF format">
+    <title>AVIF Converter for macOS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            color: #6e6e73;
+            margin-bottom: 30px;
+        }
+
+        .download-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .version {
+            color: white;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #1d1d1f;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            color: #1d1d1f;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #515154;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #515154;
+        }
+
+        code {
+            background: #f5f5f7;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+            font-size: 0.9em;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            padding: 20px;
+            background: #f5f5f7;
+            border-radius: 8px;
+        }
+
+        .feature h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+        }
+
+        .links {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #d2d2d7;
+            text-align: center;
+        }
+
+        .links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #d2d2d7;
+            text-align: center;
+            color: #86868b;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AVIF Converter</h1>
+        <p class="tagline">Simple macOS Finder Quick Actions for converting images to and from AVIF format</p>
+
+        <div class="download-section">
+            <a href="https://github.com/dogbot/avif-converter/releases/download/v1.0.0/AVIF-Converter.dmg" class="download-btn">
+                Download for macOS
+            </a>
+            <p class="version">Version 1.0.0 • Free & Open Source</p>
+        </div>
+
+        <h2>What is AVIF?</h2>
+        <p>AVIF is a modern image format with excellent compression—typically 50% smaller than JPEG with better quality. More apps will support it over time, so these tools let you easily convert back and forth.</p>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>🎯 Simple</h3>
+                <p>Right-click any image in Finder to convert</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ Fast</h3>
+                <p>Batch convert multiple files at once</p>
+            </div>
+            <div class="feature">
+                <h3>🔒 Safe</h3>
+                <p>Original files are always preserved</p>
+            </div>
+            <div class="feature">
+                <h3>🆓 Free</h3>
+                <p>Open source, no ads, no tracking</p>
+            </div>
+        </div>
+
+        <h2>Installation</h2>
+
+        <h3>1. Install libavif</h3>
+        <p>Using Homebrew:</p>
+        <code>brew install libavif</code>
+
+        <h3>2. Install AVIF Converter</h3>
+        <ol>
+            <li>Download and open <strong>AVIF-Converter.dmg</strong></li>
+            <li>Double-click <code>install.sh</code> to install</li>
+            <li>Restart Finder if needed: <code>killall Finder</code></li>
+        </ol>
+
+        <h2>Usage</h2>
+        <ol>
+            <li>Right-click any image file in Finder</li>
+            <li>Go to <strong>Quick Actions</strong> (or <strong>Services</strong>)</li>
+            <li>Select <strong>Convert to AVIF</strong> or <strong>Convert from AVIF</strong></li>
+        </ol>
+        <p>The converted file appears in the same directory with the new extension.</p>
+
+        <h2>Supported Formats</h2>
+        <ul>
+            <li><strong>Convert TO AVIF:</strong> JPG, PNG, WebP, TIFF, BMP, and more</li>
+            <li><strong>Convert FROM AVIF:</strong> AVIF to JPG</li>
+        </ul>
+
+        <div class="links">
+            <a href="https://github.com/dogbot/avif-converter">View on GitHub</a>
+            <a href="https://github.com/dogbot/avif-converter/issues">Report an Issue</a>
+            <a href="https://github.com/AOMediaCodec/libavif">About libavif</a>
+        </div>
+
+        <div class="footer">
+            <p>Created by <a href="https://colina.net" style="color: inherit;">colina.net</a> • Public Domain</p>
+        </div>
+    </div>
+</body>
+</html>
